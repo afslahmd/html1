@@ -6,6 +6,7 @@
 
        <style>
        body {
+        background-color: azure;
   background-image: url('images/back 1.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -214,7 +215,7 @@ background image behaves.
 <h1 style="background-color:rgba(255, 99, 71, 0.5);">rgba(255, 99, 71, 0.5)</h1>
 <h1 style="background-color:hsla(9, 100%, 64%, 0.5);">hsla(9, 100%, 64%, 0.5)</h1>
 
-<p>In addition to the predefined color names, colors can be specified using RGB, HEX, HSL, or even transparent colors using RGBA or HSLA color values.</p>
+<p style="color:blueviolet; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";>In addition to the predefined color names, colors can be specified using RGB, HEX, HSL, or even transparent colors using RGBA or HSLA color values.</p>
 <h1 style="border:2px solid Tomato;">Hello World</h1>
 <h1 style="border:2px solid DodgerBlue;">Hello World</h1>
 <h1 style="border:2px solid Violet;">Hello World</h1>
@@ -282,13 +283,188 @@ background image behaves.
 
 <hr>
 <h2>The picture Element</h2>
-
+<p> Seeting diffrent size images for different screen resolutions</p>
 <picture>
   <source media="(min-width: 650px)" srcset="Images/Img2.jpeg">
   <source media="(min-width: 465px)" srcset="Images/img3.jpeg">
   <img src="Images/img1.png" alt="Forest land" style="width:auto;">
 </picture>
 <hr>
+<h3> LISTS - ul (unodered), ol (ordered), dl (description)</h3>
+<br>
+<p>Unordered list</p>
+<ul>
+  <li>coffee</li>
+  <li>tea</li>
+  <li>mug</li>
+</ul>
+<br>
+<p>Ordered list</p>
+<ol>
+  <li>coffee</li>
+  <li>tea</li>
+  <li>mug</li>
+</ol>
+<br>
+<p>Description</p>
+<dl>
+  <dt>Coffee:</dt>
+  <dd>- Black hot drink.</dd>
+  <dt>Milk:</dt>
+  <dd>- White cold drink.</dd>
+</dl>
+<br>
+<hr>
+<h2>HTML iframe syntax</h2>
+<iframe src="url" height="200" width="300" title="Iframe Example"></iframe>
+<br>
+<p>You can also use the CSS height and width properties and set border to specify the size of the iframe:</p>
+<iframe src="/Index.html" style="height:200px;width:300px;border:none" title="Iframe Example"></iframe>
+ <br>
+ <iframe src="demo_iframe.htm" style="border:2px solid red;" title="Iframe Example"></iframe>
+ <p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
+ <p>In the case of of opening an website in this case Google, it's likely that they have implemented security measures to prevent their pages from being loaded in iframes on other websites, which is a common practice among many major websites to protect user data and prevent abuse.
+  If you need to display content from another website within your page, you might consider alternative methods such as embedding APIs provided by the website (if available), or using a backend proxy to fetch and serve the content to your page.</p>
+<hr>
+<h2>Computer Code</h2>
+<p>Some programming code:</p>
+
+<code>
+x = 5;
+y = 6;
+z = x + y;
+</code>
+<br>
+<p>The kbd element is used to define keyboard input:</p>
+<p>Save the document by pressing <kbd>Ctrl + S</kbd></p>
+<br>
+<p>The code element does not preserve whitespace and line-breaks.</p>
+<p>To fix this, you can put the code element inside a pre element:</p>
+
+<pre>
+<code>
+x = 5;
+y = 6;
+z = x + y;
+</code>
+</pre>
+<br>
+<p>The samp element is used to define sample output from a computer program.</p>
+
+<p>Message from my computer:</p>
+<p><samp>File not found.<br>Press F1 to continue</samp></p>
+<br>
+<p>The HTML VAR element  is used to define a variable in programming or in a mathematical expression. The content inside is typically displayed in italic.</p>
+<p>The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> is the base, and <var>h</var> is the vertical height.</p>
+<hr>
+<h2> FORMS</h2>
+<p><b>An HTML form is used to collect user input. The user input is most often sent to a server for processing.
+</b></p>
+<h2>Text input fields</h2>
+
+<form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe">
+</form>
+
+<p>Note that the form itself is not visible.</p>
+
+<p>Also note that the default width of text input fields is 20 characters.</p>
+<br>
+
+<h2>Radio Buttons</h2>
+
+<p>Choose your favorite Web language:</p>
+
+<form>
+  <input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">HTML</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">CSS</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">JavaScript</label>
+</form> 
+
+<h2>Checkboxes</h2>
+<p>The <strong>input type="checkbox"</strong> defines a checkbox:</p>
+
+<form action="/action_page.php">
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <label for="vehicle1"> I have a bike</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+  <label for="vehicle2"> I have a car</label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+  <label for="vehicle3"> I have a boat</label><br><br>
+  <input type="submit" value="Submit">
+</form> 
+<br>
+<h2>HTML Forms- Submit Funtion</h2>
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="First Name"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Last Name"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php" ou would create another file, action_page.php, to handle the form submission. This file would typically contain server-side code (such as PHP) to process the form data and perform actions like saving it to a database, sending it via email, or any other required tasks..</p>
+
+<h2>The form target attribute</h2>
+
+<p>When submitting this form, the result will be opened in a new browser tab:</p>
+
+<form action="/action_page.php" target="_blank">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+<h2>The method Attribute</h2>
+
+<p>This form will be submitted using the GET method: The form-data can be sent as URL variables (with method="get") or as HTTP post transaction (with method="post").
+
+  The default HTTP method when submitting form data is GET</p>
+
+<form action="/action_page.php" target="_blank" method="get">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<p>After you submit, notice that the form values is visible in the address bar of the new browser tab.</p>
+
+<h1>The form autocomplete attribute</h1>
+
+<p>Fill in and submit the form, then reload the page, start to fill in the form again - and see how autocomplete works.</p>
+
+<p>Then, try to set autocomplete to "off".</p>
+
+<form action="/action_page.php" autocomplete="on">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="email">Email:</label>
+  <input type="text" id="email" name="email"><br><br>
+  <input type="submit">
+</form>
+
+<h1>The form novalidate attribute</h1>
+
+<p>The novalidate attribute indicates that the form input is not to be validated on submit:</p>
+
+<form action="/action_page.php" novalidate>
+  <label for="email">Enter your email:</label>
+  <input type="email" id="email" name="email"><br><br>
+  <input type="submit">
+</form>
+
+
 
 
 
